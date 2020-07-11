@@ -1,0 +1,221 @@
+.who-we-are {
+    font-family: 'Nexa Light';
+    width: 100%;
+    color: #4A4A47;
+    justify-content: flex-end;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    &__power-icon {
+        display: inline-block;
+        width: 45px;
+    }
+    &__item-container {     
+        display: flex;
+        padding-top: 10%;
+        margin-right: 70px;
+        width: 76%;
+        max-width: 1200px;
+        justify-content: flex-end;
+    }
+    &__item {
+        max-width: 570px;
+        float: right;
+        p {
+            font-size: 20px;
+            line-height: 34px;
+        }
+    }
+    &__video {
+        margin-right: 5%;
+    }
+    &__header {
+        font-family: 'Nexa Bold';
+        border-top: 2px solid #4A4A47;
+        border-bottom: 2px solid #4A4A47;
+        font-size: 80px;
+        overflow: hidden;
+        padding: 15px 0px;
+        transition: 1s;
+        span {
+            color: #FF5F4B;
+        }
+        &--on {
+            height: inherit;
+        }
+        &--off {
+            height: 5px;
+        }
+    }
+
+}
+
+
+
+// philosophy
+.philosophy {
+    font-family: 'Nexa Light';
+    width: 100%;
+    height: 100vh;
+    background-color: #333232;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+     &__text {
+        max-width: 550px;
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 24%;
+        left: 70px;
+        &__header {
+            font-family: 'Nexa Bold';
+            border-top: 2px solid #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
+            font-size: 80px;
+            width: 90%;
+            padding: 10px 0px; 
+            overflow: hidden;
+            transition: 1s;
+        }
+        &__body {
+            font-size: 23px;
+            line-height: 32px;
+        }
+    }
+     &__forza-fuse {
+        position: absolute;
+        right: 9%;
+        top: -3%;
+        width: 600px;
+     }
+}
+
+// Thinking
+.thinking {
+    font-family: 'Nexa Light';
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #4A4A47;
+    &__text {
+        position:  absolute;
+        max-width: 470px;
+        right: 70px;
+        bottom: 20%;
+        &__header {
+            font-family: 'Nexa Bold';
+            border-top: 2px solid #4A4A47;
+            border-bottom: 2px solid #4A4A47;
+            font-size: 80px;
+            width: 90%;
+            padding: 10px 0px; 
+        }
+        &__body {
+            margin-top: 50px;
+            font-size: 23px;
+            line-height: 32px;
+        }
+    }
+    &__cloud {
+        position:  absolute;
+        left: 5%;
+        top: 18%;
+    }
+    &__cloud-image {
+        position:  absolute;
+        transition: 1s;
+        &--on {
+            left: 10%;
+            bottom: 12%;
+            width: 550px;
+        }
+        &--off {
+            left: 7%;
+            bottom: 5%;
+            width: 400px;
+        }
+
+    }
+}
+
+.workflow {
+    font-family: 'Nexa Light';
+    width: 100%;
+    height: 100vh;
+    background-color: #333232;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    &__image {
+        position: absolute;
+        transition: 1s;
+        &--kite {
+            top: 10%;
+            left: 15%;
+            animation: kiteout 1.5s ease forwards;
+        }
+        &--animate {
+            animation: kite 1.5s ease forwards;   
+        } 
+    }
+    &__list {
+        position: absolute;
+        bottom: 15%;
+        right: 70px;
+        max-width: 610px;
+        &__item {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__text{
+        max-width: 600px;
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 15%;
+        left: 70px;
+        &__header {
+            font-family: 'Nexa Bold';
+            border-top: 2px solid #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
+            font-size: 80px;
+            width: 90%;
+            padding: 10px 0px; 
+        }
+        &__body {
+            font-size: 23px;
+            line-height: 32px;
+            width: 550px;
+        }
+    }
+}
+
+@keyframes aboutheaders {
+    0%{ 
+        height: 5px;
+    }
+    100%{height: inherit;}
+}
+
+@keyframes kite {
+    0%{ 
+        top: 20%;
+        left: 15%;
+    }
+    100%{
+        top: 15%;
+        left: 20%;
+    }
+}
+
+@keyframes kiteout {
+    0%{ 
+        top: 15%;
+        left: 20%;
+    }
+    100%{
+        top: 20%;
+        left: 15%;
+    }
+}

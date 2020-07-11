@@ -1,0 +1,121 @@
+@import './styles/fonts/fonts.scss';
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+  color: #4A4A47;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+.main-container {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  &__nav {
+    position: fixed;
+    width: 100%;
+    max-width: 1600px;
+    z-index: 1500;
+  }
+}
+
+.list {
+  &--white {
+      color: white;
+  }
+  &__header {
+      font-size: 30px;
+      color: white;
+      font-weight: 700;
+  }
+  &__body {
+      font-size: 23px;
+      line-height: 32px;
+      max-width: 550px;
+  }
+  &__number {
+      font-family: 'Nexa Bold';
+      border-right: 2px solid #FF5F4B;
+      font-weight: 500;
+      color: white;
+      font-size: 90px;
+      width: 70px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+      margin-right: 20px;
+      // span {
+      //     position: absolute;
+      //     top: 15%;
+      // }
+      &__figures {
+          position: absolute;
+          top: 15%;
+          color: #FF5F4B;
+          &--animate-out {
+            animation: numberout 1s ease forwards;             
+          }
+          &--animate-in {
+            animation: numberin 1s ease forwards;  
+          }
+          &--one {
+              right: -13px;
+          }
+          &--two {
+              right: -25px;
+          }
+          &--three {
+              right: -22px;
+          }
+          &--four {
+            right: -15px;
+          }
+      }
+  }
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.animate-appear {
+  animation: animateappear 2s ease forwards;  
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes numberout {
+  0% { 
+    transform: translateX(0px)
+  }
+  100% {
+    transform: translateX(300px)
+  }
+}
+
+@keyframes numberin {
+  0%{ 
+      transform: translateX(300px)
+  }
+  100%{transform: translateX(0px)}
+}
+
+@keyframes animateappear {
+  0%{ 
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
